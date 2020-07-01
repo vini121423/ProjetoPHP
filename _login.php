@@ -15,7 +15,7 @@
    <div class="container-fluid col-sm-4 top align-center">
       <img src="https://image.flaticon.com/icons/png/512/295/295128.png" class="img-center" height="230px" width="230px">
       <div>
-         <form action="autenticar.php" method="post">
+         <form action="_autenticar.php" method="post">
             <div class="form-group">
                <label> Usuário </label>
                <input type="email" name="usuario" class="form-control" placeholder=" Usuário" autocomplete="off" required>
@@ -32,15 +32,12 @@
                <br>
             </div>
       </div>
-      <h6>Não possui cadastro ? Clique <a href="cadastrar_usuario_externo.php"> aqui </a>
+      <h6>Não possui cadastro ? Clique <a href="_cadastrar_usuario_externo.php"> aqui </a>
          <h6>
 
             </form>
    </div>
    </div>
-
-
-
 
 
 </body>

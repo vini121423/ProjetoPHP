@@ -1,6 +1,6 @@
 <?php
 
- include 'conexao.php';
+ include '_conexao.php';
 
 
 
@@ -22,5 +22,5 @@ if(isset($_FILES['arquivo'])){
 }
  $inserir = mysqli_query($conexao,$sql);
 
-   header('Location: cadastrar_produto.php');
+   header('Location: _cadastrar_produto.php');
 ?>

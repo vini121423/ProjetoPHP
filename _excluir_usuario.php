@@ -1,5 +1,5 @@
 <?php
-    include 'conexao.php';
+    include '_conexao.php';
 
    $id=$_GET['id'];
 
@@ -10,7 +10,7 @@
 
 
 
-  header("Location: aprovar_usuario.php");
+  header("Location: _aprovar_usuarios.php");
 
 
 ?>

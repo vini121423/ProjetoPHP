@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Listagem de Fornecedores | System</title>
+    <title>Aprovar Usuários | System</title>
     <link rel="icon" type="image/png" href="img/producao.png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -11,33 +11,42 @@
 
 <body>
   <div class="container" style="margin-top:100px">
-      <h3 style="text-align:center"> FORNECEDORES LISTADOS </h3>
+      <h3> Aprovar usuário </h3>
 
       <br>
       <br>
   <table class="table">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">Fornecedor</th>
+      <th scope="col">Nome</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Nível</th>
       <th scope="col">AÇÃO</th>
     </tr>
   </thead>
   
       <?php
-          include 'conexao.php';
+          include '_conexao.php';
           
-          $sql ="Select * from `fornecedor`";
+          $sql ="Select * from `usuarios` where status='Inativo'";
           $busca = mysqli_query($conexao,$sql);
 
           while ($array = mysqli_fetch_array($busca)){
-              $id_fornecedor = $array['id_fornecedor'];
-              $fornecedor = $array['fornecedor'];
-    
+              $id_usuario = $array['id_usuario'];
+              $nomeusuario = $array['nome_usuario'];
+              $email = $array['email_usuario'];
+              $nivel = $array['nivel_usuario'];
       ?>
     <tr>
-      <td> <?php echo $fornecedor ?></td>
-      <td><a class="btn btn-warning btn-sm" style="color:white" href="editar_fornecedor.php?id=<?php echo $id_fornecedor ?>" role="button">Editar</a>
-      <a class="btn btn-danger btn-sm" style="color:white" href="excluir_fornecedor.php?id=<?php echo $id_fornecedor ?>" role="button">Excluir</a>
+      <td> <?php echo $nomeusuario ?></td>
+      <td> <?php echo $email ?></td>
+      <td> <?php echo $nivel ?></td>
+
+      <td><a class="btn btn-warning btn-sm" style="color:white" href="_aprovar_usuario.php?id=<?php echo $id_usuario ?> &nivel=1" role="button">Administrador</a>
+      <a class="btn btn-success btn-sm" style="color:white" href="_aprovar_usuario.php?id=<?php echo $id_usuario ?> &nivel=2" role="button">Funcionário</a>
+      <a class="btn btn-info btn-sm" style="color:white" href="_aprovar_usuario.php?id=<?php echo $id_usuario ?> &nivel=3" role="button">Conferente</a>
+      
+      <a class="btn btn-danger btn-sm" style="color:white" href="_excluir_usuario.php?id=<?php echo $id_usuario ?>" role="button">Excluir</a>
       </td>
 <?php } ?>
 
@@ -47,7 +56,7 @@
   <br>
   
   <div class="container" align="center">
-    <a href="index.php" class="btn btn-info">Voltar</a>
+    <a href="_pagina_inicial.php" class="btn btn-info">Voltar</a>
   </div> 
 
 

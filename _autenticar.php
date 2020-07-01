@@ -1,7 +1,7 @@
 <?php
 
 
-  include 'conexao.php';
+  include '_conexao.php';
   include 'script/password.php'; 
 
   $usuario = $_POST['usuario'];
@@ -26,17 +26,17 @@
 
 
            
-            header('Location: index.php');
+            header('Location: _index.php');
         } else{
 
-            header('Location: erro.php');
+            header('Location: _erro.php');
 
         }
 
       }
     }
       if($total === 0){
-          header('Location: erro.php');
+          header('Location: _erro.php');
 
       }
 

@@ -1,7 +1,7 @@
 <?php
 
 
-include 'conexao.php';
+include '_conexao.php';
 
 
 $id = $_POST["id"];
@@ -12,5 +12,5 @@ $fornecedor = $_POST["fornecedor"];
 
  $atualizar = mysqli_query($conexao,$sql);
 
- header('Location:listar_fornecedores.php');
+ header('Location:_listar_fornecedores.php');
 ?>

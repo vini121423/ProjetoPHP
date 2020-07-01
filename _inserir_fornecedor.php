@@ -1,5 +1,5 @@
 <?php
-  include 'conexao.php';
+  include '_conexao.php';
 $fornecedor = $_POST["fornecedor"];
 $sql = "INSERT into Fornecedor(fornecedor) values ('$fornecedor')";
 $inserir = mysqli_query($conexao,$sql);
@@ -11,6 +11,6 @@ $inserir = mysqli_query($conexao,$sql);
   <div class="container">
     <h4 style="margin-top:20px"> Fornecedor adicionado com Sucesso!!!! </h4>
      <div style="padding-top: 30px">
-      <a href="adicionar_fornecedor.php" role="button" class="btn btn-sm btn-danger"> Cadastrar nova fornecedor </a>
+      <a href="_adicionar_fornecedor.php" role="button" class="btn btn-sm btn-danger"> Cadastrar nova fornecedor </a>
      </div>
   </div>

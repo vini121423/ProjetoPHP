@@ -21,7 +21,7 @@
 
   <div class="container" align="center">
   <button type="submit" class="btn btn-success"> Cadastrar</button>
-    <a href="index.php" class="btn btn-info">Voltar</a>
+    <a href="_pagina_inicial.php" class="btn btn-info">Voltar</a>
   </div>
 
 

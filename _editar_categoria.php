@@ -25,7 +25,7 @@
     <hr> 
 <form action="_atualizar_categoria.php" method="post"> 
     <?php 
-        include 'conexao.php';
+        include '_conexao.php';
 
     $sql = "SELECT * FROM `categoria` WHERE id_categoria = $id";
     $buscar = mysqli_query($conexao,$sql);

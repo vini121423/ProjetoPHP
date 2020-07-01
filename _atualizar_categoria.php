@@ -1,7 +1,7 @@
 <?php
 
 
-include 'conexao.php';
+include '_conexao.php';
 
 
 $id = $_POST["id"];
@@ -12,5 +12,5 @@ $categoria = $_POST["categoria"];
 
  $atualizar = mysqli_query($conexao,$sql);
 
- header('Location:listar_categorias.php');
+ header('Location:_listar_categorias.php');
 ?>

@@ -2,6 +2,7 @@ body {
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 7%, rgba(9, 9, 121, 1) 50%, rgba(0, 212, 255, 1) 100%);
     color: white;
     font-size: 18px;
+   
 }
 
 .card-login {
@@ -55,6 +56,18 @@ a:hover{
 }
 
 .top{
-    margin-top:70px;
+    margin-top:20px;
     margin-bottom:20px;
+}
+
+.title-action{
+    margin:30px !important;
+}
+
+.footer{
+    margin-top:20px;
+}
+
+h1{
+    margin-bottom: 100px;
 }

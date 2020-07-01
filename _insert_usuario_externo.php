@@ -1,5 +1,5 @@
 <?php
-   include 'conexao.php';
+   include '_conexao.php';
    include 'script/password.php';
 
 
@@ -25,7 +25,7 @@
 <div class="container">
  <h3> Usuário Cadastrado,Esperando aprovação.... </h3>
     <div style="margin-top:50px">
-      <a href="pagina_inicial.php" class="btn btn-sm btn-danger"> Voltar </a>
+      <a href="_pagina_inicial.php" class="btn btn-sm btn-danger"> Voltar </a>
     </div>
 </div>
 

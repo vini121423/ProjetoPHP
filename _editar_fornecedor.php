@@ -25,7 +25,7 @@
     <hr> 
 <form action="_atualizar_fornecedor.php" method="post"> 
     <?php 
-        include 'conexao.php';
+        include '_conexao.php';
 
     $sql = "SELECT * FROM `fornecedor` WHERE id_fornecedor = $id";
     $buscar = mysqli_query($conexao,$sql);

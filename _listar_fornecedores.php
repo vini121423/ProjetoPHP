@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Listagem de Categorias | System</title>
+    <title>Listagem de Fornecedores | System</title>
     <link rel="icon" type="image/png" href="img/producao.png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -11,33 +11,33 @@
 
 <body>
   <div class="container" style="margin-top:100px">
-      <h3 style="text-align:center"> CATEGORIAS LISTADAS </h3>
+      <h3 style="text-align:center"> FORNECEDORES LISTADOS </h3>
 
       <br>
       <br>
   <table class="table">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">Categoria</th>
+      <th scope="col">Fornecedor</th>
       <th scope="col">AÇÃO</th>
     </tr>
   </thead>
   
       <?php
-          include 'conexao.php';
+          include '_conexao.php';
           
-          $sql ="Select * from `categoria`";
+          $sql ="Select * from `fornecedor`";
           $busca = mysqli_query($conexao,$sql);
 
           while ($array = mysqli_fetch_array($busca)){
-              $id_categoria = $array['id_categoria'];
-              $categoria = $array['categoria'];
+              $id_fornecedor = $array['id_fornecedor'];
+              $fornecedor = $array['fornecedor'];
     
       ?>
     <tr>
-      <td> <?php echo $categoria ?></td>
-      <td><a class="btn btn-warning btn-sm" style="color:white" href="editar_categoria.php?id=<?php echo $id_categoria ?>" role="button">Editar</a>
-      <a class="btn btn-danger btn-sm" style="color:white" href="excluir_categoria.php?id=<?php echo $id_categoria ?>" role="button">Excluir</a>
+      <td> <?php echo $fornecedor ?></td>
+      <td><a class="btn btn-warning btn-sm" style="color:white" href="_editar_fornecedor.php?id=<?php echo $id_fornecedor ?>" role="button">Editar</a>
+      <a class="btn btn-danger btn-sm" style="color:white" href="_excluir_fornecedor.php?id=<?php echo $id_fornecedor ?>" role="button">Excluir</a>
       </td>
 <?php } ?>
 

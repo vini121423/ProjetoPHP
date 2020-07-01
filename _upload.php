@@ -1,5 +1,5 @@
 <?php
-  include("conexao.php");
+  include("_conexao.php");
   $msg = false;
   if(isset($_FILES['arquivo'])){
     $extensao = strtolower(substr($_FILES['arquivo']['name'], -4)); //pega a extensao do arquivo
@@ -22,7 +22,7 @@
 
 <h1>Upload de Arquivos</h1>
 <?php if(isset($msg) && $msg != false) echo "<p> $msg </p>"; ?>
-<form action="upload.php" method="POST" enctype="multipart/form-data">
+<form action="_upload.php" method="POST" enctype="multipart/form-data">
   Arquivo: <input type="file" required name="arquivo">
   <input type="submit" value="Salvar">
 

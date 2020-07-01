@@ -1,5 +1,5 @@
 <?php
-   include 'conexao.php';
+   include '_conexao.php';
    include 'script/password.php';
 
 
@@ -17,7 +17,7 @@
    $inserir = mysqli_query($conexao,$sql);
 
 
-   header('Location:index.php');
+   header('Location:_pagina_inicial.php');
 ?>
 
 

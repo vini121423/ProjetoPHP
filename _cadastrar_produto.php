@@ -37,7 +37,7 @@
     <label>Categoria</label>
     <select class="form-control" name="categoria">
       <?php 
-        include 'conexao.php';
+        include '_conexao.php';
             $sql = "SELECT categoria from Categoria order by categoria";
             $buscar = mysqli_query($conexao,$sql);
 
@@ -62,7 +62,7 @@
     <label>Fornecedor</label>
     <select class="form-control" name="fornecedor">
     <?php 
-        include 'conexao.php';
+        include '_conexao.php';
             $sql2 = "SELECT fornecedor from Fornecedor order by fornecedor";
             $buscar2 = mysqli_query($conexao,$sql2);
 
@@ -90,7 +90,7 @@
   <br>
   <div align="center">
       <input type="submit" class="btn btn-dark" value="Salvar">
-      <a href="index.php" class="btn btn-info">Voltar</a>
+      <a href="_pagina_inicial.php" class="btn btn-info">Voltar</a>
   </div>
   
     
