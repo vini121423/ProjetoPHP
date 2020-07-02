@@ -1,3 +1,4 @@
+
 body {
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 7%, rgba(9, 9, 121, 1) 50%, rgba(0, 212, 255, 1) 100%);
     color: white;
@@ -56,12 +57,12 @@ a:hover{
 }
 
 .top{
-    margin-top:20px;
+    margin-top:40px;
     margin-bottom:20px;
 }
 
 .title-action{
-    margin:30px !important;
+    margin:10px !important;
 }
 
 .footer{
@@ -69,5 +70,24 @@ a:hover{
 }
 
 h1{
-    margin-bottom: 100px;
+    margin-bottom: 10px;
 }
+
+input{
+    border-radius:20px;
+    
+}
+
+.col-sm-7{
+    margin-top:100px !important;
+   
+}
+
+.left{
+    align-items: flex-start;
+}
+
+#input{
+    width:50%;
+}
+
