@@ -48,7 +48,7 @@
   <br>
 
   <div class="container" align="center">
-    <a href="index.php" class="btn btn-info">Voltar</a>
+    <a href="_index.php" class="btn btn-info">Voltar</a>
   </div>
 
 

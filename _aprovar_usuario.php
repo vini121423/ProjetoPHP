@@ -25,6 +25,6 @@
         $update = "UPDATE usuarios set status= 'Ativo', nivel_usuario=3 WHERE id_usuario = $id";
         $atualizacao = mysqli_query($conexao,$update);
 
-        header('Location: _pagina_inicial.php');
+        header('Location: _index.php');
     }
 ?>

@@ -95,7 +95,7 @@ $id = $_GET["id"];
         </div>
 
         <button type="submit" class="btn btn-dark" value="Atualizar"> Atualizar </button>
-        <a href="_pagina_inicial.php" class="btn btn-info">Voltar</a>
+        <a href="_index.php" class="btn btn-info">Voltar</a>
 
 
 

@@ -129,7 +129,7 @@
                             <img src="img/code.png" height="170px" width="170px">
                             <h5 class="card-title">Aprovar usuários</h5>
                             <p class="card-text">Aprovar usuários cadastrados</p>
-                            <a href="_aprovar_usuario.php" class="btn btn-primary"><i class="icon-check"></i> Aprovar</a>
+                            <a href="_aprovar_usuarios.php" class="btn btn-primary"><i class="icon-check"></i> Aprovar</a>
                         </div>
                     </div>
                 </div>

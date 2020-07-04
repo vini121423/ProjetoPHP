@@ -87,7 +87,7 @@
     <br>
     <div align="center">
       <input type="submit" class="btn btn-dark" value="Salvar">
-      <a href="_pagina_inicial.php" class="btn btn-info">Voltar</a>
+      <a href="_index.php" class="btn btn-info">Voltar</a>
     </div>
 
 
