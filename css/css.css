@@ -93,3 +93,8 @@ input {
 td {
     color: white;
 }
+
+.usuario{
+    z-index: auto;
+    margin:10px !important;
+}
