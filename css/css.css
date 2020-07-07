@@ -2,12 +2,18 @@ body {
    background-color: rgb(12, 8, 36);
     color: white !important;
     font-size: 18px;
+
+    
 }
+
+
 
 .card-login {
     text-align: center;
     align-items: center;
-    border: 2px black;
+    border: 12px white;
+    z-index:9999;
+    opacity:1;
 }
 
 .align-center {
@@ -98,3 +104,4 @@ td {
     z-index: auto;
     margin:10px !important;
 }
+

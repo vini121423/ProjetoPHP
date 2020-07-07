@@ -11,6 +11,24 @@
 </head>
 
 <body>
+<?php
+    include '_conexao.php';
+    session_start();
+    $usuario = $_SESSION['usuario'];
+
+
+    if (!isset($_SESSION['usuario'])) {
+        header('Location: _login.php');
+    }
+
+    $sql = "SELECT nivel_usuario from usuarios where email_usuario = '$usuario'";
+    $buscar = mysqli_query($conexao, $sql);
+
+    $array = mysqli_fetch_array($buscar);
+    $nivel = $array['nivel_usuario'];
+
+    ?>
+    
   <div class="container" style="margin-top:100px">
     <h3 style="text-align:center"> FORNECEDORES LISTADOS </h3>
 
