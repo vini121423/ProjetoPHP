@@ -8,14 +8,6 @@ body {
 
 
 
-.card-login {
-    text-align: center;
-    align-items: center;
-    border: 12px white;
-    z-index:9999;
-    opacity:1;
-}
-
 .align-center {
     align-items: center;
     text-align: center;
@@ -39,7 +31,8 @@ p {
     width: 100px;
 }
 .login-button:hover {
-    zoom: 1.1;
+    zoom:1.1;
+    
 }
 
 a {
