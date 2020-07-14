@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" href="img/producao.png" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
 
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -32,6 +32,18 @@
 
     $array = mysqli_fetch_array($buscar);
     $nivel = $array['nivel_usuario'];
+	
+	$funcao = "";
+	
+    if($nivel === 1){
+	  $funcao = "Administrador";	
+	  
+	  
+    }else if($nivel === 2){
+       $funcao = "Funcionário";
+	} else{
+       $funcao = "Conferente";
+	}		
 
     ?>
 
@@ -54,8 +66,14 @@
             </div>
             <div class="usuario align-center">
                 <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-outline-light btn-lg"><i class="icon-user">&nbsp;<?php echo $nivel ?></i></button>
+                    <button type="button" class="btn btn-outline-light btn-lg"><i class="icon-user">&nbsp;<?php echo $funcao ?></i></button>
                     <button type="button" class="btn btn-outline-light btn-lg"><?php echo $nomeusuario ?></button>
+					<button type="button" class="btn btn-outline-light btn-lg">
+                        <a href="_pdf.php">
+                            <i class="icon-file"> Relatório</i>
+
+                        </a>
+                    </button>
                     <button type="button" class="btn btn-outline-light btn-lg">
                         <a href="_pagina_inicial.php">
                             <i class="icon-signout"> Sair</i>
