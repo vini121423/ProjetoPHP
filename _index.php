@@ -29,35 +29,29 @@
 
     $sql = "SELECT nivel_usuario from usuarios where email_usuario = '$usuario'";
     $buscar = mysqli_query($conexao, $sql);
-
     $array = mysqli_fetch_array($buscar);
     $nivel = $array['nivel_usuario'];
-	
 	$funcao = "";
+
 	
     if($nivel === 1){
 	  $funcao = "Administrador";	
-	  
-	  
     }else if($nivel === 2){
        $funcao = "Funcionário";
 	} else{
        $funcao = "Conferente";
 	}		
 
+
+    $sqls = "SELECT nome_usuario from usuarios where email_usuario = '$usuario'";
+    $busca = mysqli_query($conexao, $sqls);
+
+    $arrays = mysqli_fetch_array($busca);
+	$nome = $arrays['nome_usuario'];
+	
     ?>
+	
 
-    <?php
-    include '_conexao.php';
-
-    $sql = "Select * from `usuarios` where status='Ativo'";
-    $busca = mysqli_query($conexao, $sql);
-
-    while ($array = mysqli_fetch_array($busca)) {
-        $nomeusuario = $array['nome_usuario'];
-        $nivel = $array['nivel_usuario'];
-
-    ?>
 
 
         <div class="container container-fluid">
@@ -65,9 +59,12 @@
                 <h1> CENTRAL DE AÇÕES </h1>
             </div>
             <div class="usuario align-center">
+			 
+			
                 <div class="btn-group" role="group" aria-label="Basic example">
                     <button type="button" class="btn btn-outline-light btn-lg"><i class="icon-user">&nbsp;<?php echo $funcao ?></i></button>
-                    <button type="button" class="btn btn-outline-light btn-lg"><?php echo $nomeusuario ?></button>
+                    <button type="button" class="btn btn-outline-light btn-lg"><?php echo $nome ?></button>   
+					
 					<button type="button" class="btn btn-outline-light btn-lg">
                         <a href="_pdf.php">
                             <i class="icon-file"> Relatório</i>
@@ -75,13 +72,15 @@
                         </a>
                     </button>
                     <button type="button" class="btn btn-outline-light btn-lg">
-                        <a href="_pagina_inicial.php">
-                            <i class="icon-signout"> Sair</i>
+                        <a href="_logout.php">
+                            <i class="icon-signout"> Sair </i>
 
                         </a>
                     </button>
+					  
+					
                 </div>
-            <?php } ?>
+         
             </div>
 
 

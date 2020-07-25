@@ -29,7 +29,7 @@
   $nivel = $array['nivel_usuario'];
 
   ?>
-    <button class="login-button"> <a href="_pdf.php">TESTE</a> </button>
+   
 
   <div class="container" style="margin-top:100px">
     <h3 style="text-align:center"> PRODUTOS LISTADOS </h3>
