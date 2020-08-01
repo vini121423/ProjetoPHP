@@ -29,12 +29,45 @@
   $nivel = $array['nivel_usuario'];
 
   ?>
-   
+
 
   <div class="container" style="margin-top:100px">
     <h3 style="text-align:center"> PRODUTOS LISTADOS </h3>
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>?a=buscar">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <input type="text" name="palavra" class="form-control" placeholder="Pesquisar..">
+          <input type="submit" value="palavra" class="btn btn-outline-success" type="button" id="button-addon1">
+        </div>
 
-    <br>
+      </div>
+    </form>
+
+
+
+
+    <?php
+    include '_conexao.php';
+    $a = $_GET['a'];
+
+    if ($a == "buscar") {
+
+      $palavra = trim($_POST['palavra']);
+      $sql1 = "SELECT * FROM estoque WHERE nomeproduto LIKE '%" . $palavra . "%' ORDER BY nomeproduto";
+      $enviar = mysqli_query($conexao, $sql1);
+      $numRegistros = mysqli_num_rows($enviar);
+
+
+      if ($numRegistros != 0) {
+        while ($estoque = mysqli_fetch_object($enviar)) {
+          echo $estoque->nomeproduto . " <br />";
+        }
+      } else {
+        echo "Nenhum produto foi encontrado.";
+      }
+    }
+    ?>
+
     <br>
     <table class="table">
       <thead class="thead-dark">
@@ -67,6 +100,7 @@
         $vlunidade = $array['vlunidade'];
         $arquivo = $array['arquivo'];
         $data = $array['data'];
+
 
       ?>
         <tr>
